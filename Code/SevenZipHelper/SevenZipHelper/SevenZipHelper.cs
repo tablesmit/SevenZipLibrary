@@ -130,6 +130,11 @@ namespace SevenZipHelper
             this.compressor.Code(sourceStream, compressedStream, -1, -1, this);
         }
 
+        /// <summary>
+        /// Decompress the source stream and writes into the uncompressed stream given as argument.
+        /// </summary>
+        /// <param name="compressedStream"></param>
+        /// <param name="uncompressedStream"></param>
         public void Decompress( System.IO.Stream compressedStream, System.IO.Stream uncompressedStream )
         {
             compressedStream.Seek(0, System.IO.SeekOrigin.Begin);
